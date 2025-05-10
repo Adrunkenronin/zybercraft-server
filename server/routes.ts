@@ -10,7 +10,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   const httpServer = createServer(app);
   
   // Create WebSocket server for Eaglercraft connections
-  const wss = new WebSocketServer({ server: httpServer, path: '/ws' });
+  const wss = new WebSocketServer({ server: httpServer, path: '/mc' });
   
   // Handle WebSocket connections
   wss.on('connection', (ws: WebSocket) => {
